@@ -46,7 +46,9 @@ header.style.gridTemplateColumns = "1fr 1fr 1fr"
 headerSection("Home");
 headerSection("menu");
 headerSection("About");
-
+header.style.padding = "18%";
+header.style.paddingTop = "1%";
+header.style.paddingBottom = "1%";
 /* MAIN */
 function handleClick(a) {
     console.log(a);
@@ -66,27 +68,38 @@ function handleClick(a) {
     content.appendChild(footer);
 }
 /* self call */
-handleClick("About");
-/* HOME */
+handleClick("Home");
 function value(e) {
     let a = e.target.id;
     console.log(a)
     handleClick(a);
 }
+/* HOME */
+
 function Home() {
-    let p1 = document.createElement("p");
-    let img = document.createElement("img");
-    let p2 = document.createElement("p");
-    p1.textContent = "The Pickle is a casual breakfast and lunch cafe, ideal for enjoying food, conversation, and work. The space is divided into three areas, one that accomodates larger groups, another for four diners and less, and then small cafe tables with outlets."
-    p2.textContent = "All of our fruits and vegetables are sourced from local farmers. We compost our scraps. The Pickle is a vegan establishment. We do not use any ingredients from animals"
-    img.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/menu.jpg";
-    content.appendChild(main);
+    const h2 = document.createElement("h2");
+    h2.textContent = "Welcome To Food For A Reason Restaurant";
+    const p1 = document.createElement("p");
+    p1.textContent = "Authentic flavours | Localy sourced";
+    const p2 = document.createElement("p");
+    p2.textContent = "At Food For A Reason Restaurant, we believe that dining should be more than just a meal - it should be an adventure. Come explore our menu and discover something new.";
+    const img = document.createElement("img");
+    img.style.height = "100%";
+    img.style.width = "100%";
+    h2.style.textAlign = "center";
+    p1.style.textAlign = "center"
+    img.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/home.jpg";
+    main.appendChild(h2);
     main.appendChild(p1);
-    main.appendChild(img);
     main.appendChild(p2);
-    const home = document.getElementById("Home");
-    home.style.background = "red";
+    main.appendChild(img);
+    main.style.display = "flex";
+    main.style.flexDirection = "column"
+    main.style.padding = "18%";
+    main.style.paddingTop = "5%";
+    main.style.paddingBottom = "5%";
 }
+/* menu */
 function menu() {
     let p1 = document.createElement("p");
     let img = document.createElement("img");
@@ -101,6 +114,7 @@ function menu() {
     const home = document.getElementById("menu");
     home.style.background = "red";
 }
+/* about */
 function About() {
     const h2 = document.createElement("h2");
     h2.textContent = "About Us";
