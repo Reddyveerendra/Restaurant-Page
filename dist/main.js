@@ -5,6 +5,8 @@ const main = document.createElement("main");
 var footer = document.createElement("footer");
 const body = document.querySelector("body");
 body.style.margin = "0%";
+body.style.color = "white";
+body.style.backgroundColor = "black"
 main.id = "main";
 content.appendChild(title);
 content.appendChild(header);
@@ -15,7 +17,7 @@ main.style.border = "1px solid black";
 content.appendChild(footer);
 footer.style.border = "1px solid black";
 /* TITLE */
-title.textContent = "Food For A Reason";
+title.textContent = "Biryani Junction";
 title.style.textAlign = "center";
 title.style.margin = "0%";
 title.style.padding = "2%";
@@ -36,10 +38,12 @@ function headerSection(name) {
 }
 function itemOn(e) {
     e.target.style.background = "#FEF0E4";
+    e.target.style.color = "brown"
     console.log("hi");
 }
 function itemOut(e) {
     e.target.style.background = "";
+    e.target.style.color = "";
 }
 header.style.display = "grid";
 header.style.gridTemplateColumns = "1fr 1fr 1fr"
@@ -78,11 +82,11 @@ function value(e) {
 
 function Home() {
     const h2 = document.createElement("h2");
-    h2.textContent = "Welcome To Food For A Reason Restaurant";
+    h2.textContent = "Welcome To Biryani Junction";
     const p1 = document.createElement("p");
     p1.textContent = "Authentic flavours | Localy sourced";
     const p2 = document.createElement("p");
-    p2.textContent = "At Food For A Reason Restaurant, we believe that dining should be more than just a meal - it should be an adventure. Come explore our menu and discover something new.";
+    p2.textContent = "At Biryani Junction, we believe that dining should be more than just a meal - it should be an adventure. Come explore our menu and discover something new.";
     const img = document.createElement("img");
     img.style.height = "100%";
     img.style.width = "100%";
@@ -101,18 +105,100 @@ function Home() {
 }
 /* menu */
 function menu() {
-    let p1 = document.createElement("p");
-    let img = document.createElement("img");
-    let p2 = document.createElement("p");
-    p1.textContent = "The Pickle is a casual breakfast and lunch cafe, ideal for enjoying food, conversation, and work. The space is divided into three areas, one that accomodates larger groups, another for four diners and less, and then small cafe tables with outlets."
-    p2.textContent = "All of our fruits and vegetables are sourced from local farmers. We compost our scraps. The Pickle is a vegan establishment. We do not use any ingredients from animals"
-    img.src = "https://www.theworlds50best.com/discovery/filestore/jpg/Pages-Paris-France-02.jpg";
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    const div3 = document.createElement("div");
+    const div4 = document.createElement("div");
+    const div5 = document.createElement("div");
+    const div6 = document.createElement("div");
+    const p1 = document.createElement("p");
+    const img1 = document.createElement("img");
+    p1.textContent = "Chicken Biryani - 150rs";
+    img1.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/Chicken-Biryani.jpg";
+    img1.style.height = "75px";
+    img1.style.width = "75px";
+    div1.style.display = "flex";
+    div1.appendChild(img1);
+    div1.appendChild(p1);
+    div1.style.flexDirection = "column";
+    div1.style.width = "200px";
+    const p2 = document.createElement("p");
+    const img2 = document.createElement("img");
+    p2.textContent = "Mutton Biryani - 220rs"
+    img2.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/Mutton-Biryani.jpg"
+    img2.style.height = "75px";
+    img2.style.width = "75px";
+    div2.style.display = "flex";
+    div2.appendChild(img2);
+    div2.appendChild(p2);
+    div2.style.width = "200px";
+    div2.style.flexDirection = "column";
+    const p3 = document.createElement("p");
+    const img3 = document.createElement("img");
+    p3.textContent = "Egg Biryani - 110rs"
+    img3.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/egg%20Biryani.jpg"
+    img3.style.height = "75px";
+    img3.style.width = "75px";
+    div3.style.display = "flex";
+    div3.appendChild(img3);
+    div3.appendChild(p3);
+    div3.style.width = "200px";
+    div3.style.flexDirection = "column";
+    const p4 = document.createElement("p");
+    const img4 = document.createElement("img");
+    p4.textContent = "Fish Biryani - 180rs";
+    img4.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/Fish-Biryani.jpg";
+    img4.style.height = "75px";
+    img4.style.width = "75px";
+    div4.style.display = "flex";
+    div4.appendChild(img4);
+    div4.appendChild(p4);
+    div4.style.width = "200px";
+    div4.style.flexDirection = "column";
+    const p5 = document.createElement("p");
+    const img5 = document.createElement("img");
+    p5.textContent = "Paneer Biryani - 150rs";
+    img5.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/Paneer%20Biryani.jpg";
+    img5.style.height = "75px";
+    img5.style.width = "75px";
+    div5.style.display = "flex";
+    div5.appendChild(img5);
+    div5.appendChild(p5);
+    div5.style.width = "200px";
+    div5.style.flexDirection = "column";
+    const p6 = document.createElement("p");
+    const img6 = document.createElement("img");
+    p6.textContent = "Vegetable Biryani - 90rs";
+    img6.src = "https://raw.githubusercontent.com/Reddyveerendra/Restaurant-Page/main/images/Vegetable%20Biryan.jpg";
+    img6.style.height = "75px";
+    img6.style.width = "75px";
+    div6.style.display = "flex";
+    div6.style.flexDirection = "column";
+    div6.appendChild(img6);
+    div6.appendChild(p6);
+    div6.style.width = "200px";
     content.appendChild(main);
-    main.appendChild(p1);
-    main.appendChild(img);
-    main.appendChild(p2);
-    const home = document.getElementById("menu");
-    home.style.background = "red";
+    main.appendChild(div1);
+    main.appendChild(div2);
+    main.appendChild(div3);
+    main.appendChild(div4);
+    main.appendChild(div5);
+    main.appendChild(div6);
+    div6.style.border = "orange solid 3px"
+    div6.style.alignItems = "center";
+    div5.style.border = "orange solid 3px"
+    div5.style.alignItems = "center";
+    div4.style.border = "orange solid 3px"
+    div4.style.alignItems = "center";
+    div3.style.border = "orange solid 3px"
+    div3.style.alignItems = "center";
+    div2.style.border = "orange solid 3px"
+    div2.style.alignItems = "center";
+    div1.style.border = "orange solid 3px"
+    div1.style.alignItems = "center";
+    main.style.justifyContent = "center";
+    main.style.position = "center";
+    main.style.gap = "20px";
 }
 /* about */
 function About() {
@@ -184,7 +270,6 @@ function About() {
     img3.style.width = "100%";
     img2.style.height = "200px";
     img3.style.height = "200px";
-
     div3.appendChild(div31);
 }
 
@@ -194,7 +279,7 @@ function About() {
 /* FOOTER */
 
 let footer_p = document.createElement("a");
-footer_p.textContent = "Developed with ♥ by Reddy akshaya"
+footer_p.textContent = "Developed with ♥ by Reddy Veerendra"
 footer_p.href = "https://github.com/Reddyveerendra";
 footer.appendChild(footer_p);
 footer.style.display = "flex";
